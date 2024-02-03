@@ -10,3 +10,5 @@ Using the current iteration of RED still feels pretty decent. I'm lucky in that 
 holes so they feel more comfortable and natural, and make the case a little bigger to accommodate wires and components (and tidy up the wires).
 
 ![PXL_20240203_193035259](https://github.com/DavidJamesAdam/RED-Retro-Entertainment-Device-/assets/51091241/9b49205b-bd01-4ee7-985e-15c9608aa43e)
+![PXL_20240203_193043982](https://github.com/DavidJamesAdam/RED-Retro-Entertainment-Device-/assets/51091241/b2c80f1b-0f7c-49d6-b6c5-288df75f1cf5)
+![PXL_20240203_193054747](https://github.com/DavidJamesAdam/RED-Retro-Entertainment-Device-/assets/51091241/88921d35-e9f6-4628-a284-5cb32b003bd2)

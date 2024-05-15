@@ -9,6 +9,8 @@ really leant itself to a solid gaming experience, I'd imagine.
 Using the current iteration of RED still feels pretty decent. I'm lucky in that for the next iteration, there's very little I have to change/add. All I really need to do is add a second joystick, redesign the buttons so they don't stick as often, move the shoulder button
 holes so they feel more comfortable and natural, and make the case a little bigger to accommodate wires and components (and tidy up the wires).
 
+[Here](https://youtu.be/1x1y4Cz8RAQ) is a quick video demo of RED in it's current iteration.
+
 ![PXL_20240203_193035259](https://github.com/DavidJamesAdam/RED-Retro-Entertainment-Device-/assets/51091241/9b49205b-bd01-4ee7-985e-15c9608aa43e)
 ![PXL_20240203_193043982](https://github.com/DavidJamesAdam/RED-Retro-Entertainment-Device-/assets/51091241/b2c80f1b-0f7c-49d6-b6c5-288df75f1cf5)
 ![PXL_20240203_193054747](https://github.com/DavidJamesAdam/RED-Retro-Entertainment-Device-/assets/51091241/88921d35-e9f6-4628-a284-5cb32b003bd2)

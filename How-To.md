@@ -4,7 +4,7 @@ If you come across issues, please google it, there is a very strong likelyhood t
 Connecting to Raspberry Pi remotely. (Windows)
 1. Make sure RaspberryPi is on
 2. Open terminal
-3. Type ssh <username>@<ipaddress>
+3. Type ssh "username"@"ipaddress"
 4. Username is probably pi
   - Ip address can be found in RetroPi under Settings > Show ip
   - If it’s your first time connecting, you’ll have a prompt asking “are you sure you want to continue connecting?”

@@ -24,7 +24,7 @@ Connecting to Raspberry Pi remotely from VS Code
 https://code.visualstudio.com/docs/remote/ssh
 
 Connecting to local server to check PiSugar battery
-- "After finished, you can manage the battery by visiting http://<your raspberry ip>:8421 in your browser."
+- "After finished, you can manage the battery by visiting http://"your raspberry ip":8421 in your browser."
 https://github.com/PiSugar/PiSugar/wiki/PiSugar2
 
 How to backup a Raspberry Pi IMG

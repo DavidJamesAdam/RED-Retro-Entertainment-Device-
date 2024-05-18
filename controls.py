@@ -40,8 +40,11 @@ GPIO.setup(RightTrigger, GPIO.IN, pull_up_down=GPIO.PUD_UP) #Right trigger
 
 #set up SPI for analog joystick
 # Define Axis Channels (channel 3 to 7 can be assigned for more buttons / joysticks)
-vrx_channel = 0
-vry_channel = 1
+LX_channel = 1
+LY_channel = 0
+RX_channel = 2
+RY_channel = 3
+
 #Time delay, which tells how many seconds the value is read out
 delay = 0.5
  
@@ -63,7 +66,7 @@ events = (
 	uinput.BTN_DPAD_RIGHT,
 	uinput.BTN_SELECT,
 	uinput.BTN_START,
-    uinput.BTN_A,
+    	uinput.BTN_A,
 	uinput.BTN_B,
 	uinput.BTN_X,
 	uinput.BTN_Y,
@@ -73,6 +76,8 @@ events = (
 	uinput.BTN_TR2,
     uinput.ABS_X + (0, 255, 0, 0),
     uinput.ABS_Y + (0, 255, 0, 0),
+    # uinput.ABS_RX + (0, 255, 0, 0),
+    # uinput.ABS_RY + (0, 255, 0, 0)	
 )
 
 device = uinput.Device(events)
@@ -95,10 +100,12 @@ x_value = 128 #8 bit center
 y_value = 128 #8 bit center
 device.emit(uinput.ABS_X, x_value, syn=False)
 device.emit(uinput.ABS_Y, y_value)
+# device.emit(uinput.ABS_RX, x_value, syn=False)
+# device.emit(uinput.ABS_RY, y_value)
 
 try:
 	while True:
-		x_read = readChannel(vrx_channel)
+		x_read = readChannel(LX_channel)
 		if x_mid_low <= x_read and x_read <= x_mid_high:	#x_read between x_mid_low and x_mid_high is automatically centered
 			x_value = 128
 		if x_read < x_mid_low:	#x_read less than x_mid_low scaled between 0-127:x_min-x_mid_low
@@ -111,7 +118,7 @@ try:
 			x_value = 0
 		device.emit(uinput.ABS_X, int(x_value))
 
-		y_read = readChannel(vry_channel)
+		y_read = readChannel(LY_channel)
 		if y_mid_low <= y_read and y_read <= y_mid_high:	#y_read between y_mid_low and y_mid_high is automatically centered
 			y_value = 128 
 		if y_read < y_mid_low:	#y_read less than y_mid_low scaled between 0-127:y_min-y_mid_low
@@ -124,28 +131,54 @@ try:
 			y_value = 255
 		device.emit(uinput.ABS_Y, int(y_value))
 
+		# xr_read = readChannel(RX_channel)
+		# if x_mid_low <= xr_read and xr_read <= x_mid_high:	#x_read between x_mid_low and x_mid_high is automatically centered
+		# 	x_value = 128
+		# if xr_read < x_mid_low:	#x_read less than x_mid_low scaled between 0-127:x_min-x_mid_low
+		# 	x_value = 255-(xr_read-x_min)*127/(x_mid_low-x_min)
+		# if xr_read < x_min:	#x_read below x_min is autmatically minimum
+		# 	x_value = 255
+		# if xr_read > x_mid_high:	#x_read greater than x_mid_high scaled between 128-255:x_mid_high-x_max
+		# 	x_value = 127-(xr_read-x_mid_high)*127/(x_max-x_mid_high)
+		# if xr_read > x_max:	#x_read above x_max is autmatically maximum
+		# 	x_value = 0
+		# device.emit(uinput.ABS_RX, int(x_value))
+
+		# yr_read = readChannel(RY_channel)
+		# if y_mid_low <= yr_read and yr_read <= y_mid_high:	#y_read between y_mid_low and y_mid_high is automatically centered
+		# 	y_value = 128 
+		# if yr_read < y_mid_low:	#y_read less than y_mid_low scaled between 0-127:y_min-y_mid_low
+		# 	y_value = (yr_read-y_min)*127/(y_mid_low-y_min)
+		# if yr_read < y_min:	#y_read below y_min is autmatically minimum
+		# 	y_value = 0
+		# if yr_read > y_mid_high:	#y_read greater than y_mid_high scaled between 128-255:y_mid_high-y_max
+		# 	y_value = 128+(yr_read-y_mid_high)*127/(y_max-y_mid_high)
+		# if yr_read > y_max:	#x_read above y_max is autmatically maximum
+		# 	y_value = 255
+		# device.emit(uinput.ABS_RY, int(y_value))
+
 		#print("X axis: {}  Y axis : {}".format(x_value,y_value))
 
 		if GPIO.input(DPadUp) == GPIO.LOW:
-			print("D-pad up pressed")
+			#print("D-pad up pressed")
 			device.emit(uinput.BTN_DPAD_UP, 1)
 		else:
 			device.emit(uinput.BTN_DPAD_UP, 0)
 		
 		if GPIO.input(DPadDown) == GPIO.LOW:
-			print("D-pad down pressed")
+			#print("D-pad down pressed")
 			device.emit(uinput.BTN_DPAD_DOWN, 1)
 		else:
 			device.emit(uinput.BTN_DPAD_DOWN, 0)
 
 		if GPIO.input(DPadLeft) == GPIO.LOW:
-			print("D-pad left pressed")
+			#print("D-pad left pressed")
 			device.emit(uinput.BTN_DPAD_LEFT, 1)
 		else:
 			device.emit(uinput.BTN_DPAD_LEFT, 0)
 
 		if GPIO.input(DPadRight) == GPIO.LOW:
-			print("D-pad right pressed")
+			#print("D-pad right pressed")
 			device.emit(uinput.BTN_DPAD_RIGHT, 1)
 		else:
 			device.emit(uinput.BTN_DPAD_RIGHT, 0)

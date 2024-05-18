@@ -5,7 +5,7 @@ Inspiration: [Leandro Linares "Designing my own gaming console"](https://www.you
 [Code I heavily based my code off of](https://github.com/gianodog/MCP3008-GPIO_joystick/blob/master/MCP3008-GPIO_joystick.py)
 - Note: This code doesn't work, or at least I couldn't get it to work exactly as it is, but it includes a lot of stuff I used.
 
-[A little tutorial on how to use the MCP3008 with the analog joystick](https://tutorials-raspberrypi.com/raspberry-pi-joystick-with-mcp3008/)
+[A little tutorial on how to use the ADC, the MCP3008, with the analog joystick](https://tutorials-raspberrypi.com/raspberry-pi-joystick-with-mcp3008/)
 
 [A video walkthough of someone's project using C code to creat inputs for buttons/analog joystick](https://othermod.com/analog-joystick-on-retropie/)
 
@@ -28,7 +28,7 @@ Buttons:
 - [Soft](https://www.adafruit.com/product/3101)
 - [Clicky](https://www.adafruit.com/product/367)
 
-IC chip: 
+ADC IC chip: 
 - [MCP3008](https://www.adafruit.com/product/856)
 
 Battery: 

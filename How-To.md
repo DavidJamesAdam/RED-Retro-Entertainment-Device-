@@ -50,7 +50,7 @@ There are a number of things to consider about the joystick:
 - Here's a picture I drew to help me remember what pins go to what GPIO pins
   - Please note: the GPIO pins refer to just that, the GPIO pins, not the **actual physical pins** on the Raspberry Pi. Refer to a pin diagram of the Raspberry Pi 4b to know where the pins are located.
 ![IMG_0259](https://github.com/DavidJamesAdam/RED-Retro-Entertainment-Device-/assets/51091241/bed422f1-5937-4172-a26c-7c0181f40f61)
-- Really, the directional values can go into any channel on the input side, but it's easiest to put the x values (left/right) in channel 0 and y values (up/down), into channel 1, but where you ultimately put those values it up to you.
+- Really, the directional values can go into any channel on the input side, but it's easiest to put the x values (left/right) in channel 0 and y values (up/down), into channel 1, but where you ultimately put those values it up to you, you just need to make sure to update the code based on what channel you have the X/Y values going to.
 - The GND on the joystick will go to GND
 - 3.3V power should go to which ever pins power the joystick on the joystick itself (on the Parallax joystick I'm using, it's the L/R+ and U/D+ pins, the labeling on your joystick might be different).
 

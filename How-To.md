@@ -58,5 +58,5 @@ At this point, if you have everything wired up correctly and you have the script
   
 At the very least, I hope this gets you started. And please remember, if you come across an issue **please google it first**. If you've done all you can and still can't figure out an issue, I would be more than willing to help to the best of my ability.  
 
-Once I dismantle RED MKI, I will be implementing and testing a second joystick, but that's not for quite some time.
+Once I dismantle RED MKI, I will be implementing and testing a second joystick, but that's not for quite some time. Circuit diagrams will also be coming soon.
 

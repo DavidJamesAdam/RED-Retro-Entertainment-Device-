@@ -1,5 +1,5 @@
 Here are various, quick and dirty walkthroughs of various things I used to work on RED, with various links associated with each topic. 
-If you come across issues, please google it, there is a very strong likelyhood that others have come across the same problem. These steps are very specific to my computer and on Windows, so there's a chance you might need to approach certain steps a bit differently based on your OS and local machine.
+If you come across issues, please google it, there is a very strong likelyhood that others have come across the same problem. If you've done enough googling around, I'd be more than happy to help to the best of my ability. These steps are very specific to my computer and on Windows, so there's a chance you might need to approach certain steps a bit differently based on your OS and local machine.
 
 Connecting to Raspberry Pi remotely. (Windows)
 1. Make sure RaspberryPi is on
